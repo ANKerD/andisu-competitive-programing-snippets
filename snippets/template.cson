@@ -4,14 +4,14 @@
 		'body': """
 		#include <bits/stdc++.h>
 		using namespace std;
-		#define trace1(a) cout << a << '\n';
-		#define trace2(a, b) cout << a << ' ' << b << '\n';
-		#define trace3(a, b, c) cout << a << ' ' << b << ' ' << c << '\n';
-		#define trace4(a, b, c, d) cout << a << ' ' << b << ' ' << c << ' ' << d << '\n';
-		#define trace5(a, b, c, d, e) cout << a << ' ' << b << ' ' << c << ' ' << d << ' ' << e << '\n';
-		#define trace6(a, b, c, d, e, f) cout << a << ' ' << b << ' ' << c << ' ' << d << ' ' << e << ' ' << f << '\n';
+		#define trace1(a) cout << a << '\\n';
+		#define trace2(a, b) cout << a << ' ' << b << '\\n';
+		#define trace3(a, b, c) cout << a << ' ' << b << ' ' << c << '\\n';
+		#define trace4(a, b, c, d) cout << a << ' ' << b << ' ' << c << ' ' << d << '\\n';
+		#define trace5(a, b, c, d, e) cout << a << ' ' << b << ' ' << c << ' ' << d << ' ' << e << '\\n';
+		#define trace6(a, b, c, d, e, f) cout << a << ' ' << b << ' ' << c << ' ' << d << ' ' << e << ' ' << f << '\\n';
 		#define range(n) for(int i = 0; i < n; i++)
-		#define printArr(harry, tam) range(tam) cout << harry[i] << " \n"[i == tam -1];
+		#define printArr(harry, tam) range(tam) cout << harry[i] << " \\n"[i == tam -1];
 		#define maxn -2000000 //negative value to break code and force you to put right constraint
 		#define mod 1000000007
 		#define md(x) (x) % mod;
@@ -42,7 +42,7 @@
 	'Quick type for':
 		'prefix': '_cp_for'
 		'body': """
-		for(int $1 = $2; $1 < $3; $1++){
+		for(int ${1:i} = ${2:0}; ${1:i} < ${3:n}; ${1:i}++){
 			$4
 		}
 		"""

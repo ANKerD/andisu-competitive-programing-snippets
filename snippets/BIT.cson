@@ -7,10 +7,10 @@
 			int sum = 0;
 			for(; i; i-=(i&(-i))) sum += st[i];
 				return sum;
-			}
-			void update(int i, int val)  {
-				for(; i < maxn; i+=(i&(-i))) st[i] += val;
-			}
+		}
+		void update(int i, int val)  {
+			for(; i < maxn; i+=(i&(-i))) st[i] += val;
+		}
 		"""
 	'Inversion count with Fennwick Tree':
 		'prefix': '_cp_inv_count'
