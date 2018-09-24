@@ -1,12 +1,12 @@
 {
-	"name": "andisu-competitive-programing-snippets",
-	"main": "./lib/andisu-competitive-programing-snippets",
-	"version": "0.0.0",
-	"description": "A bunch of C++ code used in Competitive programming contests.",
-	"repository": "https://github.com/ANKerD/andisu-competitive-programing-snippets",
-	"license": "MIT",
-	"engines": {
-		"atom": ">=1.0.0 <2.0.0"
-	},
-	"dependencies": {}
+  "name": "andisu-competitive-programing-snippets",
+  "main": "./lib/andisu-competitive-programing-snippets",
+  "version": "0.1.0",
+  "description": "A bunch of C++ code used in Competitive programming contests.",
+  "repository": "https://github.com/ANKerD/andisu-competitive-programing-snippets",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {}
 }
