@@ -1,0 +1,27 @@
+'.source.cpp, .source.cc':
+	'Fennwick Tree':
+		'prefix': '_cp_bit'
+		'body': """
+		int st[maxn];
+		int query(int i){
+			int sum = 0;
+			for(; i; i-=(i&(-i))) sum += st[i];
+				return sum;
+			}
+			void update(int i, int val)  {
+				for(; i < maxn; i+=(i&(-i))) st[i] += val;
+			}
+		"""
+	'Inversion count with Fennwick Tree':
+		'prefix': '_cp_inv_count'
+		'body': """
+			_cp_bit($1)
+			int getInvCount(int n){
+			    int inv = 0;
+			    for (int i=n-1; i>=0; i--)    {
+			        inv += query(arr[i]-1);
+			        update(arr[i], 1);
+			    }
+			    return inv;
+			}
+		"""
