@@ -1,1 +1,38 @@
-# TODO: 
+'.source.cpp, .source.cc':
+	'GCD':
+		'prefix': '_cp_gcd'
+		'body': """
+		    long long gcd(long long a, long long b) {
+                if (b == 0) return a;
+                return gcd(b, a % b);
+            }
+		"""
+	'Extended GCD':
+		'prefix': '_cp_ex_gcd'
+		'body': """
+			pair<long long, long long> extended_gcd(long long a, long long b) {
+                if (b == 0) return make_pair(1, 0);
+                pair<long long, long long> t = extended_gcd(b, a % b);
+                return make_pair(t.second, t.first - t.second * (a / b));
+            }
+		"""
+    'Modular inverse':
+		'prefix': '_cp_mod_inv'
+		'body': """
+			long long modinverse(long long a, long long m) {
+                return (extended_gcd(a, m).first % m + m) % m;
+            }
+		"""
+    'Power and modular power':
+		'prefix': '_cp_pow'
+		'body': """
+			long long power(long long n, long long k, long long m = LLONG_MAX) {
+                long long ret = 1;
+                while (k) {
+                    if (k & 1) ret = (ret * n) % m;
+                    n = (n * n) % m;
+                    k >>= 1;
+                }
+                return ret;
+            }
+		"""
